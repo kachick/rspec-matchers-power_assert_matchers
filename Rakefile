@@ -7,11 +7,17 @@ require 'bundler/gem_tasks'
 #   * https://github.com/rspec/rspec-core/blob/ea8554afd1a2b63677c6593059fa8f2476181deb/spec/rspec/core/rake_task_spec.rb
 require 'rspec/core/rake_task'
 
+require 'irb/color'
+
 RSpec::Core::RakeTask.new(:spec) do |t|
   t.ruby_opts = %w[-w]
 end
 
-RSpec::Core::RakeTask.new(:look_at_examples) do |t|
+task :look_at_examples do
+  puts IRB::Color.colorize_code((File.read('./examples/spec/example_spec.rb')))
+end
+
+RSpec::Core::RakeTask.new(:run_examples) do |t|
   t.pattern = 'examples/**{,/*/**}/*_spec.rb'
 end
 

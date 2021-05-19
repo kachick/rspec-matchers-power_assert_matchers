@@ -81,10 +81,10 @@ If you want to easy to check the behavior, this repository has example specs.
 ```console
 $ git clone git@github.com:kachick/rspec-matchers-power_assert_matchers.git
 $ cd rspec-matchers-power_assert_matchers
-$ cat ./examples/spec/example_spec.rb
-Rough examples will be shown!
 $ bundle install
 $ bundle exec rake look_at_examples
+Rough examples will be shown!
+$ bundle exec rake run_examples
 Some results will be shown!
 ```
 
