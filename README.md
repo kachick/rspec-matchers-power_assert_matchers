@@ -42,7 +42,7 @@ So adding this into your `spec_helper.rb` or `rails_helper.rb`
 require 'rspec/matchers/power_assert_matchers'
 ```
 
-The you can use `power_assert` with a simple custom matcher in rspec.
+Then you can use `power_assert` with a simple custom matcher in rspec.
 
 Use `expect` with block, and use `be_assert` matcher.
 
