@@ -5,8 +5,13 @@ require 'rspec'
 
 # ref: https://github.com/rspec/rspec-expectations/blob/43bf64b01f8356979ffbc373b2e81d2ab1389b29/lib/rspec/matchers/fail_matchers.rb
 require 'rspec/matchers/fail_matchers'
+
 RSpec.configure do |config|
   config.include RSpec::Matchers::FailMatchers
+
+  config.disable_monkey_patching!
+  config.warnings = true
+  config.raise_on_warning = true
 end
 
 require 'warning'
