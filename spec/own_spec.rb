@@ -23,10 +23,6 @@ RSpec.describe RSpec::Matchers::PowerAssertMatchers do
 
   # refs: https://github.com/rspec/rspec-expectations/blob/040d1b0bba83031c9ae432fd3a4462fdd1cc74e7/spec/rspec/matchers/define_negated_matcher_spec.rb
   describe 'be_assert' do
-    it 'has special description' do
-      expect(be_assert.description).to eq('as a be_truthy with power_assert')
-    end
-
     it 'passes if the block returns truthy' do
       expect {
         '0'.class != '3'.to_i.times.map {|i| i + 1 }.class
@@ -73,6 +69,21 @@ OUTPUT
           String
       RUBY
       ))
+    end
+
+    context 'when given other objects, will be similar as a be_truthy behavior' do
+      it 'passes if truthy' do
+        expect(true).to be_assert
+        expect(0).to be_assert
+        expect('').to be_assert
+        expect('false').to be_assert
+      end
+
+      it 'fails if falsy' do
+        expect {
+          expect(nil).to be_assert
+      }.to fail_with("expected: truthy value\n     got: nil")
+      end
     end
   end
 end
