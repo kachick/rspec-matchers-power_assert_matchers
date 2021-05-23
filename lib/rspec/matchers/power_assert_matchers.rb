@@ -36,18 +36,18 @@ RSpec::Matchers.define(:be_assert) do
       end
 
       result
-    when String
-      raise NotImplementedError
     else
+      dsl_context.failure_message do
+        # https://github.com/rspec/rspec-expectations/blob/43bf64b01f8356979ffbc373b2e81d2ab1389b29/lib/rspec/matchers/built_in/base_matcher.rb#L97-L99
+        # https://github.com/rspec/rspec-expectations/blob/43bf64b01f8356979ffbc373b2e81d2ab1389b29/lib/rspec/matchers/built_in/be.rb#L7-L18
+        "expected: truthy value\n     got: #{RSpec::Support::ObjectFormatter.format(actual)}"
+      end
+
       actual
     end
   end
 
   supports_block_expectations
-
-  description do
-    'as a be_truthy with power_assert'
-  end
 end
 
 require_relative 'power_assert_matchers/version'

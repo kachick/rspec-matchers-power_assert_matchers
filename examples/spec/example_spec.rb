@@ -17,24 +17,12 @@ RSpec.describe RSpec::Matchers::PowerAssertMatchers do
     end
   end
 
-  context 'when given a string, it will be evaluates as a Ruby code', skip: 'not yet implemented :)' do
-    it 'shows power_assert inspection if it returns truthy' do
-      expect(%q{
-        '0'.class == '3'.to_i.times.map {|i| i + 1 }.class
-      }).to be_assert
-    end
-
-    it 'just passes if it returns falsy' do
-      expect(%q{
-        '0'.class == '3'.to_i.times.map {|i| i + 1 }.class
-      }).to be_assert
-    end
-  end
-
   context 'when given other objects, will be similar as a be_truthy behavior' do
     it 'passes if truthy' do
       expect(true).to be_assert
       expect(0).to be_assert
+      expect('').to be_assert
+      expect('false').to be_assert
     end
 
     it 'fails if falsy' do
@@ -59,20 +47,6 @@ RSpec.describe RSpec::Matchers::PowerAssertMatchers do
         expect {
           subject.map(&:to_i).map(&:succ) == result
         }.to be_assert
-      end
-    end
-
-    context 'when given a string, it will be evaluates as a Ruby code', skip: 'not yet implemented :)' do
-      it 'shows power_assert inspection if it returns falsy' do
-        expect(%q{
-          subject.map(&:to_i).map(&:succ) == result.reverse
-        }).to be_assert
-      end
-
-      it 'just passes if it returns truthy' do
-        expect(%q{
-          subject.map(&:to_i).map(&:succ) == result
-        }).to be_assert
       end
     end
   end

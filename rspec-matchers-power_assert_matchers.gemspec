@@ -26,7 +26,7 @@ Gem::Specification.new do |gem|
   gem.add_development_dependency 'rspec', '>= 3.10.0', '< 4.0'
   gem.add_development_dependency 'warning', '>= 1.2.0', '< 2.0'
   gem.add_development_dependency 'rake', '>= 13.0.3', '< 20.0'
-  gem.add_development_dependency 'rubocop', '>= 1.14.0', '< 1.15.0'
+  gem.add_development_dependency 'rubocop', '>= 1.15.0', '< 1.16.0'
   gem.add_development_dependency 'rubocop-rake'
   gem.add_development_dependency 'rubocop-performance'
   gem.add_development_dependency 'rubocop-rubycw'
@@ -38,11 +38,11 @@ Gem::Specification.new do |gem|
 
   gem.authors       = ['Kenichi Kamiya']
   gem.email         = ['kachick1+ruby@gmail.com']
-  git_ls_filepaths = `git ls-files`.lines.map(&:chomp)
-  minimum_filepaths = git_ls_filepaths.grep(%r!\A(?:lib|sig)/!)
-  raise "obvious mistaken in packaging files: #{minimum_filepaths.inspect}" if minimum_filepaths.size < 2
-  extra_filepaths = %w[README.md LICENSE]
-  raise 'git ignores extra filename' unless (extra_filepaths - git_ls_filepaths).empty?
-  gem.files         = minimum_filepaths | extra_filepaths
+  might_be_parsing_by_tool_as_dependabot = `git ls-files`.lines.empty?
+  files = Dir['README*', '*LICENSE*',  'lib/**/*', 'sig/**/*'].uniq
+  if !might_be_parsing_by_tool_as_dependabot && files.grep(%r!\A(?:lib|sig)/!).size < 4
+    raise "obvious mistaken in packaging files: #{files.inspect}"
+  end
+  gem.files         = files
   gem.require_paths = ['lib']
 end
