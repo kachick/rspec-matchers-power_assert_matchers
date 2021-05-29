@@ -1,7 +1,5 @@
 # frozen_string_literal: true
 
-require_relative 'spec_helper'
-
 RSpec.describe RSpec::Matchers::PowerAssertMatchers do
   describe RSpec::Matchers::PowerAssertMatchers::VERSION do
     it do
