@@ -17,20 +17,12 @@ Gem::Specification.new do |gem|
   gem.metadata = {
     'homepage_uri'      => repository_url,
     'source_code_uri'   => repository_url,
+    'bug_tracker_uri'   => "#{repository_url}/issues"
   }
 
   gem.add_runtime_dependency 'rspec', '>= 3.5.0', '< 4.0'
   gem.add_runtime_dependency 'power_assert', '>= 2.0.0', '< 3.0'
   gem.add_runtime_dependency 'irb', '>= 1.3.5', '< 2.0'
-
-  gem.add_development_dependency 'rspec', '>= 3.10.0', '< 4.0'
-  gem.add_development_dependency 'warning', '>= 1.2.0', '< 2.0'
-  gem.add_development_dependency 'rake', '>= 13.0.3', '< 20.0'
-  gem.add_development_dependency 'rubocop', '>= 1.15.0', '< 1.16.0'
-  gem.add_development_dependency 'rubocop-rake', '>= 0.5.1', '< 0.6.0'
-  gem.add_development_dependency 'rubocop-performance', '>= 1.11.3', '< 1.12.0'
-  gem.add_development_dependency 'rubocop-rubycw', '>= 0.1.6', '< 0.2.0'
-  gem.add_development_dependency 'rubocop-rspec', '>= 2.3.0', '< 3.0.0'
 
   gem.required_ruby_version = '>= 2.5.0'
 
