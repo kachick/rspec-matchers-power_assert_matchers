@@ -17,6 +17,7 @@ Gem::Specification.new do |gem|
   gem.metadata = {
     'homepage_uri'      => repository_url,
     'source_code_uri'   => repository_url,
+    'bug_tracker_uri'   => "#{repository_url}/issues"
   }
 
   gem.add_runtime_dependency 'rspec', '>= 3.5.0', '< 4.0'
