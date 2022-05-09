@@ -15,9 +15,10 @@ Gem::Specification.new do |gem|
   gem.version       = RSpec::Matchers::PowerAssertMatchers::VERSION
 
   gem.metadata = {
-    'homepage_uri'      => repository_url,
-    'source_code_uri'   => repository_url,
-    'bug_tracker_uri'   => "#{repository_url}/issues"
+    'homepage_uri'          => repository_url,
+    'source_code_uri'       => repository_url,
+    'bug_tracker_uri'       => "#{repository_url}/issues",
+    'rubygems_mfa_required' => 'true'
   }
 
   gem.add_runtime_dependency 'rspec', '>= 3.5.0', '< 4.0'
