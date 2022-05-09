@@ -18,7 +18,7 @@ I hope this might be a choice of using `PowerAssert` for RSpec lovers.
 
 ## Usage
 
-Require Ruby 2.5 or later
+Require Ruby 2.6 or later
 
 Add below code into your `library`'s gemspec
 
