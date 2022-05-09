@@ -935,3 +935,6 @@ RSpec/ExampleLength:
 
 RSpec/FilePath:
   Enabled: false
+
+RSpec/BeEq:
+  Enabled: false
