@@ -24,7 +24,7 @@ Add below code into your `library`'s gemspec
 
 ```ruby
 Gem::Specification.new do |gem|
-  gem.add_development_dependency 'rspec-matchers-power_assert_matchers', '0.0.2'
+  gem.add_development_dependency 'rspec-matchers-power_assert_matchers', '0.0.3'
 end
 ```
 
@@ -32,7 +32,7 @@ Or add below into your `application`'s `Gemfile`
 
 ```ruby
 group :test do
-  gem 'rspec-matchers-power_assert_matchers', '0.0.2'
+  gem 'rspec-matchers-power_assert_matchers', '0.0.3'
 end
 ```
 
