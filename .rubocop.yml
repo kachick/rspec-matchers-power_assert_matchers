@@ -5,7 +5,7 @@ require:
   - rubocop-rspec
 
 AllCops:
-  TargetRubyVersion: 2.5
+  TargetRubyVersion: 2.6
   DisplayCopNames: true
   Exclude:
     - '**/vendor/**/*'
@@ -934,4 +934,7 @@ RSpec/ExampleLength:
   Enabled: false
 
 RSpec/FilePath:
+  Enabled: false
+
+RSpec/BeEq:
   Enabled: false

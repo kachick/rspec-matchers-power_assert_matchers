@@ -15,16 +15,17 @@ Gem::Specification.new do |gem|
   gem.version       = RSpec::Matchers::PowerAssertMatchers::VERSION
 
   gem.metadata = {
-    'homepage_uri'      => repository_url,
-    'source_code_uri'   => repository_url,
-    'bug_tracker_uri'   => "#{repository_url}/issues"
+    'homepage_uri'          => repository_url,
+    'source_code_uri'       => repository_url,
+    'bug_tracker_uri'       => "#{repository_url}/issues",
+    'rubygems_mfa_required' => 'true'
   }
 
   gem.add_runtime_dependency 'rspec', '>= 3.5.0', '< 4.0'
-  gem.add_runtime_dependency 'power_assert', '>= 2.0.0', '< 3.0'
-  gem.add_runtime_dependency 'irb', '>= 1.3.5', '< 2.0'
+  gem.add_runtime_dependency 'power_assert', '>= 2.0.1', '< 3.0'
+  gem.add_runtime_dependency 'irb', '>= 1.4.1', '< 2.0'
 
-  gem.required_ruby_version = '>= 2.5.0'
+  gem.required_ruby_version = '>= 2.6.0'
 
   # common
 
