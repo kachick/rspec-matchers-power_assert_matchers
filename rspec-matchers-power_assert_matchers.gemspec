@@ -21,8 +21,8 @@ Gem::Specification.new do |gem|
   }
 
   gem.add_runtime_dependency 'rspec', '>= 3.5.0', '< 4.0'
-  gem.add_runtime_dependency 'power_assert', '>= 2.0.0', '< 3.0'
-  gem.add_runtime_dependency 'irb', '>= 1.3.5', '< 2.0'
+  gem.add_runtime_dependency 'power_assert', '>= 2.0.1', '< 3.0'
+  gem.add_runtime_dependency 'irb', '>= 1.4.1', '< 2.0'
 
   gem.required_ruby_version = '>= 2.6.0'
 
