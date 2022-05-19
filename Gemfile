@@ -14,7 +14,7 @@ group :development do
   gem 'rubocop-rake', '~> 0.6.0', require: false
   gem 'rubocop-performance', '~> 1.13.3', require: false
   gem 'rubocop-rubycw', '~> 0.1.6', require: false
-  gem 'rubocop-rspec', '~> 2.10.0', require: false
+  gem 'rubocop-rspec', '~> 2.11.1', require: false
   gem 'rubocop-md', '~> 1.0.1', require: false
 end
 
