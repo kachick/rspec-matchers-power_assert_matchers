@@ -18,13 +18,13 @@ I hope this might be a choice of using `PowerAssert` for RSpec lovers.
 
 ## Usage
 
-Require Ruby 2.6 or later
+Require Ruby 2.7 or later
 
 Add below code into your `library`'s gemspec
 
 ```ruby
 Gem::Specification.new do |gem|
-  gem.add_development_dependency 'rspec-matchers-power_assert_matchers', '0.0.3'
+  gem.add_development_dependency 'rspec-matchers-power_assert_matchers', '~> 0.0.3'
 end
 ```
 
@@ -32,7 +32,7 @@ Or add below into your `application`'s `Gemfile`
 
 ```ruby
 group :test do
-  gem 'rspec-matchers-power_assert_matchers', '0.0.3'
+  gem 'rspec-matchers-power_assert_matchers', '~> 0.0.3'
 end
 ```
 

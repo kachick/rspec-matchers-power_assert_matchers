@@ -2,15 +2,16 @@ require:
   - rubocop-rake
   - rubocop-performance
   - rubocop-rubycw
-  - rubocop-rspec
 
 AllCops:
-  TargetRubyVersion: 2.6
+  TargetRubyVersion: 2.7
   DisplayCopNames: true
   Exclude:
     - '**/vendor/**/*'
     - 'pkg/**/*'
   NewCops: enable
+  SuggestExtensions:
+    rubocop-rspec: false # I didn't get any benefit from the cop.
 
 Metrics:
   Enabled: false
@@ -918,23 +919,3 @@ Rubycw/Rubycw:
     - 'Steepfile'
     - 'bin/**/*'
     - 'exe/**/*'
-
-RSpec:
-  Enabled: true
-  Exclude:
-    - 'examples/**/*'
-
-RSpec/MultipleExpectations:
-  Enabled: false
-
-RSpec/DescribedClass:
-  Enabled: false
-
-RSpec/ExampleLength:
-  Enabled: false
-
-RSpec/FilePath:
-  Enabled: false
-
-RSpec/BeEq:
-  Enabled: false
