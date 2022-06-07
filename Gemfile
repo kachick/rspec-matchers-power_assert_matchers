@@ -12,7 +12,7 @@ end
 group :development do
   gem 'rubocop', '~> 1.30.1', require: false
   gem 'rubocop-rake', '~> 0.6.0', require: false
-  gem 'rubocop-performance', '~> 1.14.1', require: false
+  gem 'rubocop-performance', '~> 1.14.2', require: false
   gem 'rubocop-rubycw', '~> 0.1.6', require: false
   gem 'rubocop-md', '~> 1.0.1', require: false
   # rubocop-rspec: Intentional ignored
