@@ -8,7 +8,7 @@ repository_url = "https://github.com/kachick/#{lib_name}"
 
 Gem::Specification.new do |gem|
   gem.summary       = %q{`power_assert in rspec` as a pure custom matcher}
-  gem.description   = gem.summary
+  gem.description   = %q{"ruby/power_assert" integration for RSpec. No monkey patching exists.}
   gem.homepage      = repository_url
   gem.license       = 'MIT'
   gem.name          = lib_name
