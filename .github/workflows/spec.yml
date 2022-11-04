@@ -29,10 +29,10 @@ jobs:
         os: [ubuntu-latest]
         # Due to https://github.com/actions/runner/issues/849, we have to use quotes for '3.0'
         ruby: [2.7, '3.0', 3.1, head]
-        gemfile: ['latest', 'oldest']
+        gemfile: ['Gemfile', 'oldest.gemfile']
     runs-on: ${{ matrix.os }}
     env: # $BUNDLE_GEMFILE must be set at the job level, so it is set for all steps
-      BUNDLE_GEMFILE: ${{ github.workspace }}/gemfiles/${{ matrix.gemfile }}.gemfile
+      BUNDLE_GEMFILE: ${{ github.workspace }}/${{ matrix.gemfile }}
     steps:
     - uses: actions/checkout@v3
     - run: 'mv Gemfile ./gemfiles/latest.gemfile'
