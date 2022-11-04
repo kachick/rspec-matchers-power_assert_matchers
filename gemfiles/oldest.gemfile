@@ -3,7 +3,7 @@
 
 source 'https://rubygems.org'
 
-gemspec
+gemspec(path: '../rspec-matchers-power_assert_matchers.gemspec')
 
 group :development, :test do
   gem 'rake', '~> 13.0.6'
