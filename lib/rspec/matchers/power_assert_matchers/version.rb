@@ -4,7 +4,7 @@
 module RSpec
   module Matchers
     module PowerAssertMatchers
-      VERSION = '0.1.0.pre'
+      VERSION = '0.1.0'
     end
   end
 end
