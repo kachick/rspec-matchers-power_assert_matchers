@@ -29,9 +29,13 @@ jobs:
         os: [ubuntu-latest]
         # Due to https://github.com/actions/runner/issues/849, we have to use quotes for '3.0'
         ruby: [2.7, '3.0', 3.1, head]
+        gemfile: ['latest', 'oldest']
     runs-on: ${{ matrix.os }}
+    env: # $BUNDLE_GEMFILE must be set at the job level, so it is set for all steps
+      BUNDLE_GEMFILE: ${{ github.workspace }}/gemfiles/${{ matrix.gemfile }}.gemfile
     steps:
     - uses: actions/checkout@v3
+    - run: 'mv Gemfile ./gemfiles/latest.gemfile'
     - uses: ruby/setup-ruby@v1
       env:
         # https://github.com/kachick/irb-power_assert/blob/104834846baf5caa1e8536a11c43acdd56fc849c/CONTRIBUTING.md#adding-dependencies-for-this-gem

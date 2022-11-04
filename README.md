@@ -16,7 +16,13 @@ I hope this might be a choice to integrate `PowerAssert` in RSpec.
 
 ## Usage
 
-Require Ruby 2.7 or later
+Require following dependencies
+  - Ruby 2.7 or later
+  - [rspec](https://rubygems.org/gems/rspec/)
+  - [power_assert](https://rubygems.org/gems/power_assert)
+  - [irb](https://rubygems.org/gems/irb)  # To colorize
+
+See [gemspec](rspec-matchers-power_assert_matchers.gemspec) for detail of the version restriction.
 
 Add below code into your `library`'s gemspec
 

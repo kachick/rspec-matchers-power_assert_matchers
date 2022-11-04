@@ -34,6 +34,8 @@ Gem.path.each do |path|
   Warning.ignore(//, path)
 end
 
+Warning.ignore(/power_assert\/colorize is experimental/)
+
 Warning.process do |_warning|
   :raise
 end
