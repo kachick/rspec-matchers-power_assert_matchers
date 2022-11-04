@@ -31,3 +31,13 @@ rescue LoadError
 else
   RuboCop::RakeTask.new
 end
+
+task(:view_packaging_files) do
+  sh('rm -rf ./pkg')
+  sh('rake build')
+  cd('pkg') do
+    sh('gem unpack *.gem')
+    sh('tree -I *\.gem')
+  end
+  sh('rm -rf ./pkg')
+end
