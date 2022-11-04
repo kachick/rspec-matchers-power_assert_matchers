@@ -10,11 +10,9 @@
 
 [ruby/power_assert](https://github.com/ruby/power_assert) integration for RSpec.
 
-Without no monkey patching for Ruby and RSpec.
-
-Just using [RSpec's Custom matchers way](https://relishapp.com/rspec/rspec-expectations/v/3-10/docs/custom-matchers)
-
-I hope this might be a choice of using `PowerAssert` for RSpec lovers.
+No monkey patching exists.  
+Just using [RSpec's Custom matchers way](https://relishapp.com/rspec/rspec-expectations/v/3-10/docs/custom-matchers).  
+I hope this might be a choice to integrate `PowerAssert` in RSpec.
 
 ## Usage
 
