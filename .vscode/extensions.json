@@ -6,6 +6,7 @@
     "koichisasada.vscode-rdbg",
     "soutaro.steep-vscode",
     "soutaro.rbs-syntax",
-    "rebornix.ruby"
+    "rebornix.ruby",
+    "dprint.dprint"
   ]
 }
