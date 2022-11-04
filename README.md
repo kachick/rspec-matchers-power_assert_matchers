@@ -10,17 +10,18 @@
 
 [ruby/power_assert](https://github.com/ruby/power_assert) integration for RSpec.
 
-No monkey patching exists.  
-Just using [RSpec's Custom matchers way](https://relishapp.com/rspec/rspec-expectations/v/3-10/docs/custom-matchers).  
+No monkey patching exists.\
+Just using [RSpec's Custom matchers way](https://relishapp.com/rspec/rspec-expectations/v/3-10/docs/custom-matchers).\
 I hope this might be a choice to integrate `PowerAssert` in RSpec.
 
 ## Usage
 
 Require following dependencies
-  - Ruby 2.7 or later
-  - [rspec](https://rubygems.org/gems/rspec/)
-  - [power_assert](https://rubygems.org/gems/power_assert)
-  - [irb](https://rubygems.org/gems/irb)  # To colorize
+
+- Ruby 2.7 or later
+- [rspec](https://rubygems.org/gems/rspec/)
+- [power_assert](https://rubygems.org/gems/power_assert)
+- [irb](https://rubygems.org/gems/irb) # To colorize
 
 See [gemspec](rspec-matchers-power_assert_matchers.gemspec) for detail of the version restriction.
 
@@ -94,11 +95,11 @@ Some results will be shown!
 
 ## NOTE
 
-* Currently the matcher is named `be_assert`. I don't have confident it is good ot not.
-* Extending built-in `be_truthy` sounds good for considering the role, but I would not like to add monkey patching for built-in features...
+- Currently the matcher is named `be_assert`. I don't have confident it is good ot not.
+- Extending built-in `be_truthy` sounds good for considering the role, but I would not like to add monkey patching for built-in features...
 
 ## References
 
-* [power-assert-js/power-assert](https://github.com/power-assert-js/power-assert)
-* [Power Assert in Ruby](https://speakerdeck.com/k_tsj/power-assert-in-ruby)
-* [Another way of power_assert in rspec - joker1007/rspec-power_assert](https://github.com/joker1007/rspec-power_assert)
+- [power-assert-js/power-assert](https://github.com/power-assert-js/power-assert)
+- [Power Assert in Ruby](https://speakerdeck.com/k_tsj/power-assert-in-ruby)
+- [Another way of power_assert in rspec - joker1007/rspec-power_assert](https://github.com/joker1007/rspec-power_assert)
