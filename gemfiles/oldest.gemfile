@@ -5,7 +5,7 @@ require 'pathname'
 
 source 'https://rubygems.org'
 
-gemspec(path: Pathname(__dir__).parent.join('rspec-matchers-power_assert_matchers.gemspec').to_s)
+gemspec(path: Pathname(__dir__).parent)
 
 group :development, :test do
   gem 'rake', '~> 13.0.6'
