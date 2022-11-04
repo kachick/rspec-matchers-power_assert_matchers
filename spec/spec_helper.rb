@@ -16,7 +16,9 @@ RSpec.configure do |config|
   # See https://github.com/rspec/rspec-expectations/blob/61fe1bc203fa7b906d3034401fa90f1115cb48ae/lib/rspec/expectations/configuration.rb
   config.expect_with(:rspec) do |expect_config|
     expect_config.syntax = :expect
-    expect_config.strict_predicate_matchers = true
+    if Gem::Version.new(RSpec::Version::STRING) >= Gem::Version.new('3.10.0')
+      expect_config.strict_predicate_matchers = true
+    end
     expect_config.include_chain_clauses_in_custom_matcher_descriptions = true
     expect_config.on_potential_false_positives = :raise
   end

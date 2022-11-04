@@ -21,7 +21,7 @@ Gem::Specification.new do |gem|
     'rubygems_mfa_required' => 'true'
   }
 
-  gem.add_runtime_dependency('rspec', '>= 3.10.0', '< 4.0')
+  gem.add_runtime_dependency('rspec', '>= 3.5.0', '< 4.0')
   gem.add_runtime_dependency('power_assert', '>= 2.0.0', '< 3.0')
   gem.add_runtime_dependency('irb', '>= 1.4.0', '< 2.0') # To colorize
 
