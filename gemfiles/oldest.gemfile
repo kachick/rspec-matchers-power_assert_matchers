@@ -7,10 +7,6 @@ source 'https://rubygems.org'
 
 gemspec(path: Pathname(__dir__).parent)
 
-get_oldest_version = -> name {
-  gemspecs.first.dependencies.find(-> {raise(NameError, "specified gem #{name} is not found")}) { |dep| name ==  dep.name  }.requirement.as_list.first.slice(/\W\W*\s+([[:alnum:].]+)\z/, 1)
-}
-
 group :development, :test do
   gem 'rake', '~> 13.0.6'
 end
@@ -25,8 +21,8 @@ group :development do
 end
 
 group :test do
-  gem 'rspec', get_oldest_version.('rspec')
-  gem 'power_assert', get_oldest_version.('power_assert')
-  gem 'irb', get_oldest_version.('irb')
+  gem 'rspec', '3.5.0'
+  gem 'power_assert', '2.0.0'
+  gem 'irb', '1.4.0'
   gem 'warning', '~> 1.3.0'
 end
