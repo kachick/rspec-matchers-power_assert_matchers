@@ -1,7 +1,7 @@
 # rspec-matchers-power_assert_matchers
 
 [![Build Status](https://github.com/kachick/rspec-matchers-power_assert_matchers/actions/workflows/spec.yml/badge.svg?branch=main)](https://github.com/kachick/rspec-matchers-power_assert_matchers/actions/workflows/spec.yml?query=branch%3Amain+)
-[![Gem Version](https://badge.fury.io/rb/rspec-matchers-power_assert_matchers.png)](http://badge.fury.io/rb/rspec-matchers-power_assert_matchers)
+[![Gem Version](https://badge.fury.io/rb/rspec-matchers-power_assert_matchers.svg)](https://badge.fury.io/rb/rspec-matchers-power_assert_matchers)
 
 ## Overview
 
