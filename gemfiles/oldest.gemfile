@@ -1,9 +1,11 @@
 # coding: us-ascii
 # frozen_string_literal: true
 
+require 'pathname'
+
 source 'https://rubygems.org'
 
-gemspec(path: '../../rspec-matchers-power_assert_matchers.gemspec')
+gemspec(path: Pathname(__dir__).parent.join('rspec-matchers-power_assert_matchers.gemspec').to_s)
 
 group :development, :test do
   gem 'rake', '~> 13.0.6'
