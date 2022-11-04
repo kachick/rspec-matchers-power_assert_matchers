@@ -6,9 +6,10 @@ require 'pathname'
 source 'https://rubygems.org'
 
 gemspec(path: Pathname(__dir__).parent)
+initial_gemspecs = gemspecs
 
 get_oldest_version = -> name {
-  gemspecs.first.dependencies.find(-> {raise(NameError, "specified gem #{name} is not found")}) { |dep| name ==  dep.name  }.requirement.as_list.first.slice(/\W\W*\s+([[:alnum:].]+)\z/, 1)
+  initial_gemspecs.first.dependencies.find(-> {raise(NameError, "specified gem #{name} is not found")}) { |dep| name ==  dep.name  }.requirement.as_list.first.slice(/\W\W*\s+([[:alnum:].]+)\z/, 1)
 }
 
 group :development, :test do
