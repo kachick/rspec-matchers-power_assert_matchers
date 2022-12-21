@@ -11,7 +11,7 @@ RSpec.describe RSpec::Matchers::PowerAssertMatchers do
   describe 'PowerAssert integrations' do
     it do
       pa_constant = nil
-      ::PowerAssert.class_exec do
+      PowerAssert.class_exec do
         pa_constant = const_get(:INTERNAL_LIB_DIRS).fetch(RSpec::Matchers::PowerAssertMatchers)
       end
 

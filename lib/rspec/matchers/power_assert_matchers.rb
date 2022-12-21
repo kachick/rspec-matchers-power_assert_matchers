@@ -26,7 +26,7 @@ RSpec::Matchers.define(:be_assert) do
   match(notify_expectation_failures: true) do |actual|
     case actual
     when Proc
-      result = ::PowerAssert.start(actual, assertion_method: __callee__) do |pa|
+      result = PowerAssert.start(actual, assertion_method: __callee__) do |pa|
         # https://github.com/rspec/rspec-expectations/blob/040d1b0bba83031c9ae432fd3a4462fdd1cc74e7/lib/rspec/matchers/dsl.rb#L200-L217
         # @TODO: Should simulate be_truthy message? https://github.com/rspec/rspec-expectations/blob/43bf64b01f8356979ffbc373b2e81d2ab1389b29/lib/rspec/matchers/built_in/be.rb#L7-L18
         dsl_context.failure_message do
