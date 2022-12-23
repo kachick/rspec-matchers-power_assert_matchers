@@ -22,7 +22,7 @@ Gem::Specification.new do |gem|
   }
 
   gem.add_runtime_dependency('rspec', '>= 3.5.0', '< 4.0')
-  gem.add_runtime_dependency('power_assert', '>= 2.0.0', '< 3.0')
+  gem.add_runtime_dependency('power_assert', '>= 2.0.3', '< 3.0')
   gem.add_runtime_dependency('irb', '>= 1.4.0', '< 2.0') # To colorize
 
   gem.required_ruby_version = '>= 2.7.2'
