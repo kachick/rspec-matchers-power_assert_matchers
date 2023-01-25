@@ -10,7 +10,7 @@ group :development, :test do
 end
 
 group :development do
-  gem 'rubocop', '~> 1.44.0', require: false
+  gem 'rubocop', '~> 1.44.1', require: false
   gem 'rubocop-rake', '~> 0.6.0', require: false
   gem 'rubocop-performance', '~> 1.15.2', require: false
   gem 'rubocop-rubycw', '~> 0.1.6', require: false
