@@ -1,7 +1,5 @@
 require:
   - rubocop-rake
-  - rubocop-performance
-  - rubocop-rubycw
 
 AllCops:
   TargetRubyVersion: 2.7
@@ -47,11 +45,6 @@ Rake/Desc:
 
 Gemspec:
   Enabled: true
-
-Performance:
-  Enabled: true
-  Include:
-    - 'lib/**/*'
 
 Style/Alias:
   Enabled: false
@@ -910,12 +903,3 @@ Lint/ConstantResolution:
 
 Lint/EmptyInPattern:
   Enabled: true
-
-Rubycw/Rubycw:
-  Enabled: true
-  Include:
-    - '**/*.rb'
-    - 'Rakefile'
-    - 'Steepfile'
-    - 'bin/**/*'
-    - 'exe/**/*'
