@@ -570,6 +570,11 @@ Style/RedundantSort:
 Style/RedundantSortBy:
   Enabled: true
 
+# https://github.com/rubocop/rubocop/pull/11528
+# I don't think this is redundant.
+Style/RedundantHeredocDelimiterQuotes:
+  Enabled: false
+
 Style/RegexpLiteral:
   Enabled: false
 
@@ -903,3 +908,9 @@ Lint/ConstantResolution:
 
 Lint/EmptyInPattern:
   Enabled: true
+
+Lint/Debugger:
+  Exclude:
+    - 'benchmark/**/*.rb'
+    - 'examples/**/*.rb'
+    - 'scripts/**/*.rb'
