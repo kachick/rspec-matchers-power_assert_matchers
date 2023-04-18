@@ -15,7 +15,7 @@ RSpec::Core::RakeTask.new(:spec) do |t|
 end
 
 task :look_at_examples do
-  puts IRB::Color.colorize_code((File.read('./examples/spec/example_spec.rb')))
+  puts IRB::Color.colorize_code(File.read('./examples/spec/example_spec.rb'))
 end
 
 RSpec::Core::RakeTask.new(:run_examples) do |t|
