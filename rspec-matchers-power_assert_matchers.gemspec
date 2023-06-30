@@ -3,7 +3,7 @@
 
 lib_name = 'rspec-matchers-power_assert_matchers'
 
-require_relative './lib/rspec/matchers/power_assert_matchers/version'
+require_relative 'lib/rspec/matchers/power_assert_matchers/version'
 repository_url = "https://github.com/kachick/#{lib_name}"
 
 Gem::Specification.new do |gem|
