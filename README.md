@@ -95,7 +95,7 @@ Some results will be shown!
 
 ## NOTE
 
-- Currently the matcher is named `be_assert`. I don't have confident it is good ot not.
+- Currently the matcher is named `be_assert`. I don't have confident it is good or not.
 - Extending built-in `be_truthy` sounds good for considering the role, but I would not like to add monkey patching for built-in features...
 
 ## References
