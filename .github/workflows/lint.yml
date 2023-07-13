@@ -4,10 +4,9 @@ on:
   push:
     branches:
       - main
-    paths-ignore:
-      - 'docs/**'
-      - '.vscode/**'
-  pull_request: null # This enables to run on each PRs
+  pull_request:
+  workflow_dispatch:
+
 jobs:
   rubocop:
     runs-on: 'ubuntu-latest'
@@ -18,3 +17,17 @@ jobs:
           ruby-version: '3.2'
           bundler-cache: true # runs 'bundle install' and caches installed gems automatically
       - run: bundle exec rake rubocop
+
+  dprint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: dprint/check@v2.2
+
+  typos:
+    timeout-minutes: 15
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      # Pointing to the master branch is now acceptable for this action.
+      - uses: crate-ci/typos@master

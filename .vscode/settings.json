@@ -8,8 +8,5 @@
       "useBundler": true
     }
   },
-  "ruby.format": "rubocop",
-  "cSpell.words": [
-    "kwargs"
-  ]
+  "ruby.format": "rubocop"
 }
