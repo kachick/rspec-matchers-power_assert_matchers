@@ -15,9 +15,9 @@ Gem::Specification.new do |gem|
   gem.version       = RSpec::Matchers::PowerAssertMatchers::VERSION
 
   gem.metadata = {
-    'homepage_uri'          => repository_url,
-    'source_code_uri'       => repository_url,
-    'bug_tracker_uri'       => "#{repository_url}/issues",
+    'homepage_uri' => repository_url,
+    'source_code_uri' => repository_url,
+    'bug_tracker_uri' => "#{repository_url}/issues",
     'rubygems_mfa_required' => 'true'
   }
 
@@ -32,10 +32,11 @@ Gem::Specification.new do |gem|
   gem.authors       = ['Kenichi Kamiya']
   gem.email         = ['kachick1+ruby@gmail.com']
   might_be_parsing_by_tool_as_dependabot = `git ls-files`.lines.empty?
-  files = Dir['README*', '*LICENSE*',  'lib/**/*', 'sig/**/*'].uniq
+  files = Dir['README*', '*LICENSE*', 'lib/**/*', 'sig/**/*'].uniq
   if !might_be_parsing_by_tool_as_dependabot && files.grep(%r!\A(?:lib|sig)/!).size < 4
     raise "obvious mistaken in packaging files: #{files.inspect}"
   end
+
   gem.files         = files
   gem.require_paths = ['lib']
 end

@@ -1,12 +1,9 @@
 {
   "recommendations": [
     "editorconfig.editorconfig",
-    "redhat.vscode-yaml",
+    "github.vscode-github-actions",
     "tekumara.typos-vscode",
-    "koichisasada.vscode-rdbg",
-    "soutaro.steep-vscode",
-    "soutaro.rbs-syntax",
-    "rebornix.ruby",
+    "rubocop.vscode-rubocop",
     "dprint.dprint"
   ]
 }
