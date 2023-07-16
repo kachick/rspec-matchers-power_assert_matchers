@@ -29,9 +29,9 @@ RSpec.describe RSpec::Matchers::PowerAssertMatchers do
 
     it 'shows power assert reports if the block returns falsy' do
       pa_inspection = <<'OUTPUT'
-          '0'.class == '3'.to_i.times.map {|i| i + 1 }.class
-              |     |      |    |     |                |
-              |     |      |    |     |                Array
+          '0'.class == '3'.to_i.times.map { |i| i + 1 }.class
+              |     |      |    |     |                 |
+              |     |      |    |     |                 Array
               |     |      |    |     [1, 2, 3]
               |     |      |    #<Enumerator: ...>
               |     |      3
@@ -59,9 +59,9 @@ OUTPUT
       }.to fail_with(
         IRB::Color.colorize(
           <<~'RUBY'
-            '0'.class == '3'.to_i.times.map {|i| i + 1 }.class
-                |     |      |    |     |                |
-                |     |      |    |     |                Array
+            '0'.class == '3'.to_i.times.map { |i| i + 1 }.class
+                |     |      |    |     |                 |
+                |     |      |    |     |                 Array
                 |     |      |    |     [1, 2, 3]
                 |     |      |    #<Enumerator: ...>
                 |     |      3
