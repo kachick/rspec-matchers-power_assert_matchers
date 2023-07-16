@@ -11,6 +11,7 @@
   "excludes": [
     ".git",
     "**/*lock.json",
+    "vendor",
     "docs",
     "doc",
     "steep_expectations.yml"
