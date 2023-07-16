@@ -56,17 +56,20 @@ OUTPUT
         expect {
           '0'.class == '3'.to_i.times.map { |i| i + 1 }.class
         }.to be_assert
-      }.to fail_with(IRB::Color.colorize(<<~'RUBY'
-        '0'.class == '3'.to_i.times.map {|i| i + 1 }.class
-            |     |      |    |     |                |
-            |     |      |    |     |                Array
-            |     |      |    |     [1, 2, 3]
-            |     |      |    #<Enumerator: ...>
-            |     |      3
-            |     false
-            String
-      RUBY
-                                        ))
+      }.to fail_with(
+        IRB::Color.colorize(
+          <<~'RUBY'
+            '0'.class == '3'.to_i.times.map {|i| i + 1 }.class
+                |     |      |    |     |                |
+                |     |      |    |     |                Array
+                |     |      |    |     [1, 2, 3]
+                |     |      |    #<Enumerator: ...>
+                |     |      3
+                |     false
+                String
+          RUBY
+        )
+      )
     end
 
     context 'when given other objects, will be similar as a be_truthy behavior' do
