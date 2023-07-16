@@ -4,23 +4,21 @@ on:
   push:
     branches:
       - main
-    paths-ignore:
-      - 'docs/**'
-      - 'bin/**'
-      - 'scripts/**'
-      - 'sig/**'
-      - '**.md'
-      - 'LICENSE.txt'
-      - '.vscode/**'
+    paths:
+      - '.github/workflows/spec.yml'
+      - '.ruby-version'
+      - '**.gemspec'
+      - 'Gemfile'
+      - 'Rakefile'
+      - '**.rb'
   pull_request:
-    paths-ignore:
-      - 'docs/**'
-      - 'bin/**'
-      - 'scripts/**'
-      - 'sig/**'
-      - '**.md'
-      - 'LICENSE.txt'
-      - '.vscode/**'
+    paths:
+      - '.github/workflows/spec.yml'
+      - '.ruby-version'
+      - '**.gemspec'
+      - 'Gemfile'
+      - 'Rakefile'
+      - '**.rb'
 jobs:
   rspec:
     strategy:
