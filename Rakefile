@@ -41,3 +41,22 @@ task(:view_packaging_files) do
   end
   sh('rm -rf ./pkg')
 end
+
+task(:update) do
+  sh('dprint config update --yes')
+end
+
+desc 'Print dependencies'
+task :deps do
+  sh('ruby --version')
+  sh('dprint --version')
+  sh('tree --version')
+  sh('typos --version')
+end
+
+desc 'Tests except ruby'
+task :linters do
+  sh('typos . .github .vscode')
+  sh('dprint check')
+  sh('nixpkgs-fmt --check ./*.nix')
+end
