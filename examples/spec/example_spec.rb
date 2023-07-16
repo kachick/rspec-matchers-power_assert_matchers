@@ -1,11 +1,12 @@
 # frozen_string_literal: true
+
 require_relative 'spec_helper'
 
 RSpec.describe RSpec::Matchers::PowerAssertMatchers do
   context 'when the given block returns falsy' do
     it 'shows power_assert inspection' do
       expect {
-        '0'.class == '3'.to_i.times.map {|i| i + 1 }.class
+        '0'.class == '3'.to_i.times.map { |i| i + 1 }.class
       }.to be_assert
     end
   end
@@ -13,7 +14,7 @@ RSpec.describe RSpec::Matchers::PowerAssertMatchers do
   context 'when the given block returns truthy' do
     it 'just passes' do
       expect {
-        '0'.class != '3'.to_i.times.map {|i| i + 1 }.class
+        '0'.class != '3'.to_i.times.map { |i| i + 1 }.class
       }.to be_assert
     end
   end

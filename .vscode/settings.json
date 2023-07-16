@@ -1,12 +1,10 @@
 {
-  "editor.defaultFormatter": "dprint.dprint",
   "editor.formatOnSave": true,
-  "ruby.useBundler": true,
-  "ruby.useLanguageServer": true,
-  "ruby.lint": {
-    "rubocop": {
-      "useBundler": true
-    }
+  "editor.defaultFormatter": "dprint.dprint",
+  "[ruby]": {
+    "editor.defaultFormatter": "rubocop.vscode-rubocop"
   },
-  "ruby.format": "rubocop"
+  "[nix]": {
+    "editor.defaultFormatter": "jnoortheen.nix-ide"
+  }
 }

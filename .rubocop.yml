@@ -19,8 +19,6 @@ Naming:
 
 Layout:
   Enabled: true
-  Include:
-    - 'lib/**/*'
 
 Migration:
   Enabled: true

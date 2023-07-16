@@ -23,12 +23,12 @@ RSpec.describe RSpec::Matchers::PowerAssertMatchers do
   describe 'be_assert' do
     it 'passes if the block returns truthy' do
       expect {
-        '0'.class != '3'.to_i.times.map {|i| i + 1 }.class
+        '0'.class != '3'.to_i.times.map { |i| i + 1 }.class
       }.to be_assert
     end
 
     it 'shows power assert reports if the block returns falsy' do
-      pa_inspection =<<'OUTPUT'
+      pa_inspection = <<'OUTPUT'
           '0'.class == '3'.to_i.times.map {|i| i + 1 }.class
               |     |      |    |     |                |
               |     |      |    |     |                Array
@@ -41,7 +41,7 @@ OUTPUT
 
       expect {
         expect {
-          '0'.class == '3'.to_i.times.map {|i| i + 1 }.class
+          '0'.class == '3'.to_i.times.map { |i| i + 1 }.class
         }.to be_assert
       }.to fail do |err|
         # refs
@@ -54,19 +54,19 @@ OUTPUT
     it 'shows power assert reports with colorized inspection', skip: 'Need to investigate how to test :)' do
       expect {
         expect {
-          '0'.class == '3'.to_i.times.map {|i| i + 1 }.class
+          '0'.class == '3'.to_i.times.map { |i| i + 1 }.class
         }.to be_assert
       }.to fail_with(IRB::Color.colorize(<<~'RUBY'
-      '0'.class == '3'.to_i.times.map {|i| i + 1 }.class
-          |     |      |    |     |                |
-          |     |      |    |     |                Array
-          |     |      |    |     [1, 2, 3]
-          |     |      |    #<Enumerator: ...>
-          |     |      3
-          |     false
-          String
+        '0'.class == '3'.to_i.times.map {|i| i + 1 }.class
+            |     |      |    |     |                |
+            |     |      |    |     |                Array
+            |     |      |    |     [1, 2, 3]
+            |     |      |    #<Enumerator: ...>
+            |     |      3
+            |     false
+            String
       RUBY
-      ))
+                                        ))
     end
 
     context 'when given other objects, will be similar as a be_truthy behavior' do
@@ -80,7 +80,7 @@ OUTPUT
       it 'fails if falsy' do
         expect {
           expect(nil).to be_assert
-      }.to fail_with("expected: truthy value\n     got: nil")
+        }.to fail_with("expected: truthy value\n     got: nil")
       end
     end
   end
