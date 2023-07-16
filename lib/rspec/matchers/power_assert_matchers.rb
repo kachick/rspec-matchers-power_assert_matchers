@@ -54,11 +54,5 @@ end
 require_relative 'power_assert_matchers/version'
 
 module PowerAssert
-  INTERNAL_LIB_DIRS[RSpec::Matchers::PowerAssertMatchers] = File.dirname(
-    File.dirname(
-      File.dirname(
-        caller_locations(1, 1).first.path
-      )
-    )
-  )
+  INTERNAL_LIB_DIRS[RSpec::Matchers::PowerAssertMatchers] = File.dirname(caller_locations(1, 1).first.path, 3)
 end
