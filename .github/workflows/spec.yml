@@ -31,7 +31,7 @@ jobs:
     env: # $BUNDLE_GEMFILE must be set at the job level, so it is set for all steps
       BUNDLE_GEMFILE: ${{ github.workspace }}/${{ matrix.gemfile }}
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - uses: ruby/setup-ruby@v1
         env:
           # https://github.com/kachick/irb-power_assert/blob/104834846baf5caa1e8536a11c43acdd56fc849c/CONTRIBUTING.md#adding-dependencies-for-this-gem
