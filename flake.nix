@@ -21,7 +21,7 @@
               # https://github.com/NixOS/nix/issues/730#issuecomment-162323824
               bashInteractive
 
-              ruby_3_2
+              ruby_3_3
               # Required to build psych via irb dependency
               # https://github.com/kachick/rspec-matchers-power_assert_matchers/issues/122
               # https://github.com/ruby/irb/pull/648
