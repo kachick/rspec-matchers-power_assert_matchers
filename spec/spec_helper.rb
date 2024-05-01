@@ -40,4 +40,9 @@ Warning.process do |_warning|
   :raise
 end
 
+# https://github.com/kachick/rspec-matchers-power_assert_matchers/issues/191
+# https://github.com/ruby/ruby/blob/e5b585ba908d371c67d97988795a5e40ec2f9e93/lib/prettyprint.rb#L184
+require 'prettyprint'
+Warning.ignore(/literal string will be frozen in the future/, PrettyPrint.instance_method(:text).source_location.first)
+
 require_relative '../lib/rspec/matchers/power_assert_matchers'
