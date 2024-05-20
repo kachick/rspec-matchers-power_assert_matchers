@@ -36,7 +36,7 @@ jobs:
           echo "$HOME/.local/share/mise/shims" >> $GITHUB_PATH
       - name: Install yamlfmt
         # TODO: Apply selfup after https://github.com/google/yamlfmt/pull/180
-        run: mise install yamlfmt@0.12.1
+        run: mise use -g yamlfmt@0.12.1
       - run: yamlfmt -lint .
 
   typos:
