@@ -24,6 +24,19 @@ jobs:
         with:
           dprint-version: '0.45.1' # selfup { "regex": "\\d[^']+", "script": "dprint --version | cut -d ' ' -f 2" }
 
+  yamlfmt:
+    timeout-minutes: 15
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: jdx/mise-action@0c39a522dfbced3ed83924152c45804a71ce216f # v2.0.4
+        with:
+          mise_toml: |
+            [tools]
+            # TODO: Apply selfup after https://github.com/google/yamlfmt/pull/180
+            yamlfmt = "0.12.1"
+      - run: yamlfmt -lint .
+
   typos:
     timeout-minutes: 15
     runs-on: ubuntu-latest
