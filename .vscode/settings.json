@@ -1,6 +1,12 @@
 {
   "editor.formatOnSave": true,
   "editor.defaultFormatter": "dprint.dprint",
+  "[yaml]": {
+    "editor.defaultFormatter": "kachick.vscode-yamlfmt"
+  },
+  "[github-actions-workflow]": {
+    "editor.defaultFormatter": "kachick.vscode-yamlfmt"
+  },
   "[ruby]": {
     "editor.defaultFormatter": "rubocop.vscode-rubocop"
   },
