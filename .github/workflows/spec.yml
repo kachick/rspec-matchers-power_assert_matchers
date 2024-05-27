@@ -24,13 +24,16 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os: [ubuntu-latest]
+        os: [ubuntu-24.04]
         ruby: ['head', '3.3', '3.2']
         gemfile: ['Gemfile', 'gemfiles/oldest.gemfile']
     runs-on: ${{ matrix.os }}
     env: # $BUNDLE_GEMFILE must be set at the job level, so it is set for all steps
       BUNDLE_GEMFILE: ${{ github.workspace }}/${{ matrix.gemfile }}
     steps:
+      - name: Install libyaml
+        if: startsWith(matrix.os, 'ubuntu-') && matrix.ruby == '3.2'
+        run: sudo apt-get install --no-install-recommends --assume-yes libyaml-dev
       - uses: actions/checkout@v4
       - uses: ruby/setup-ruby@v1
         env:
