@@ -32,7 +32,7 @@ jobs:
       BUNDLE_GEMFILE: ${{ github.workspace }}/${{ matrix.gemfile }}
     steps:
       - name: Install libyaml
-        if: startsWith(matrix.os, 'ubuntu-') && matrix.ruby == '3.2'
+        if: startsWith(matrix.os, 'ubuntu-')
         run: sudo apt-get install --no-install-recommends --assume-yes libyaml-dev
       - uses: actions/checkout@v4
       - uses: ruby/setup-ruby@v1
@@ -41,7 +41,9 @@ jobs:
           BUNDLE_WITHOUT: development
         with:
           ruby-version: ${{ matrix.ruby }}
-          bundler-cache: true # runs 'bundle install' and caches installed gems automatically
+          # Enabling is the recommended way, but it cannot detect runner changes in early stage.
+          # So disable it is better for test job, do not mind in other jobs
+          bundler-cache: false # runs 'bundle install' and caches installed gems automatically
       - run: bundle exec rake spec
         env:
           BUNDLE_WITHOUT: development
