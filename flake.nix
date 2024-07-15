@@ -28,7 +28,6 @@
               libyaml
 
               dprint
-              yamlfmt
               tree
               nil
               nixpkgs-fmt
