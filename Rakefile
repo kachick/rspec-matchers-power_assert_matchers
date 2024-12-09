@@ -58,5 +58,10 @@ desc 'Tests except ruby'
 task :linters do
   sh('typos . .github .vscode')
   sh('dprint check')
-  sh('nixpkgs-fmt --check ./*.nix')
+  sh('nixfmt --check ./*.nix')
+end
+
+desc 'https://github.com/kachick/selfup'
+task :selfup do
+  sh('git ls-files | xargs selfup run')
 end
