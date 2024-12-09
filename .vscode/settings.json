@@ -6,5 +6,6 @@
   },
   "[nix]": {
     "editor.defaultFormatter": "jnoortheen.nix-ide"
-  }
+  },
+  "nix.formatterPath": "nixfmt"
 }
