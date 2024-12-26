@@ -25,7 +25,7 @@ jobs:
       fail-fast: false
       matrix:
         os: [ubuntu-24.04]
-        ruby: ['head', '3.3', '3.2']
+        ruby: ['head', '3.4', '3.3']
         gemfile: ['Gemfile', 'gemfiles/oldest.gemfile']
     runs-on: ${{ matrix.os }}
     env: # $BUNDLE_GEMFILE must be set at the job level, so it is set for all steps
