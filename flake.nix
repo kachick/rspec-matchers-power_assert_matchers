@@ -34,7 +34,8 @@
           pkgs = nixpkgs.legacyPackages.${system};
         in
         {
-          default = pkgs.mkShellNoCC {
+          # Require CC to build io-console
+          default = pkgs.mkShell {
             buildInputs =
               (with pkgs; [
                 # https://github.com/NixOS/nix/issues/730#issuecomment-162323824

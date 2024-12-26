@@ -9,6 +9,8 @@ on:
       - 'flake.*'
       - '.ruby-version'
       - 'dprint.json'
+      - '**.gemspec'
+      - 'Gemfile'
   pull_request:
     paths:
       - '.github/workflows/ci-nix.yml'
@@ -16,6 +18,8 @@ on:
       - 'flake.*'
       - '.ruby-version'
       - 'dprint.json'
+      - '**.gemspec'
+      - 'Gemfile'
   schedule:
     # Every 10:42 JST
     # https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows#schedule
