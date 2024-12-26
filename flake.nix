@@ -55,6 +55,11 @@
                 typos
               ])
               ++ [ selfup.packages.${system}.default ];
+
+            # - Don't use direnv for Nix CI
+            # - Don't use .bundle/config to avoid setup-ruby and `rake release` mismatch.
+            #   See https://github.com/kachick/rspec-matchers-power_assert_matchers/issues/223 for detail
+            env.BUNDLE_PATH = "vendor/bundle";
           };
         }
       );
