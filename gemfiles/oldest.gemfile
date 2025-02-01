@@ -8,7 +8,7 @@ source 'https://rubygems.org'
 gemspec(path: Pathname(__dir__).parent)
 
 group :development, :test do
-  gem 'rake', '~> 13.0.6'
+  gem 'rake', '~> 13.2.1'
 end
 
 group :development do
