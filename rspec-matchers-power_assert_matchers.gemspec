@@ -21,7 +21,9 @@ Gem::Specification.new do |gem|
     'rubygems_mfa_required' => 'true'
   }
 
-  gem.add_dependency('rspec', '>= 3.5.0', '< 4.0')
+  # Actuallay required rspec-core 3.13.2 or later, however they only releases 3.13.0 for the meta gem
+  # See GH-267 and https://github.com/rspec/rspec/commit/3fc400f466e30d1df19688df6164bf2b5937f570 for detail
+  gem.add_dependency('rspec', '>= 3.13.0', '< 4.0')
   gem.add_dependency('power_assert', '>= 2.0.3', '< 3.0')
   gem.add_dependency('irb', '>= 1.4.0', '< 2.0') # To colorize
 
