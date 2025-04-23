@@ -9,6 +9,7 @@ on:
       - '.ruby-version'
       - '**.gemspec'
       - 'Gemfile'
+      - 'gemfiles'
       - 'Rakefile'
       - '**.rb'
   pull_request:
@@ -17,6 +18,7 @@ on:
       - '.ruby-version'
       - '**.gemspec'
       - 'Gemfile'
+      - 'gemfiles'
       - 'Rakefile'
       - '**.rb'
 jobs:
