@@ -6,10 +6,6 @@ updates:
       interval: 'monthly'
     ignore:
       - dependency-name: 'crate-ci/typos'
-    groups:
-      nix:
-        patterns:
-          - 'DeterminateSystems*'
   - package-ecosystem: 'bundler'
     directory: '/'
     schedule:
