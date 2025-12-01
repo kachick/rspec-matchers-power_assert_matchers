@@ -10,7 +10,7 @@ jobs:
   rubocop:
     runs-on: 'ubuntu-24.04'
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v6
       - uses: ruby/setup-ruby@v1
         with:
           bundler-cache: true # runs 'bundle install' and caches installed gems automatically
@@ -19,7 +19,7 @@ jobs:
   dprint:
     runs-on: ubuntu-24.04
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v6
       - uses: dprint/check@v2.3
         with:
           dprint-version: '0.50.2' # selfup {"extract":"\\d[^']+","replacer":["bash","-c","dprint --version | cut -d ' ' -f 2"]}
@@ -28,7 +28,7 @@ jobs:
     timeout-minutes: 15
     runs-on: ubuntu-24.04
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v6
       - uses: crate-ci/typos@v1.39.2 # selfup {"extract":"\\d\\.\\d+\\.\\d+","replacer":["bash","-c","typos --version | cut -d ' ' -f 2"]}
         with:
           files: |
