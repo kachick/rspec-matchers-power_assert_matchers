@@ -27,7 +27,8 @@
               # https://github.com/kachick/dotfiles/pull/228
               bashInteractive
               findutils # xargs
-              nixfmt-rfc-style
+              nixfmt
+              nixfmt-tree
               nil
 
               ruby_3_4
