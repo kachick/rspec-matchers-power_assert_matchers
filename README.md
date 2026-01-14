@@ -18,7 +18,7 @@ I hope this might be a choice to integrate `PowerAssert` in RSpec.
 
 Require following dependencies
 
-- Ruby 3.3 or higher # Tested only in the head and last 2 rubies
+- Requires Ruby 4.0, 3.4, or newer
 - [rspec](https://rubygems.org/gems/rspec/)
 - [power_assert](https://rubygems.org/gems/power_assert)
 - [irb](https://rubygems.org/gems/irb) # To colorize
