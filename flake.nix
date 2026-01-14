@@ -31,7 +31,7 @@
               nixfmt-tree
               nil
 
-              ruby_3_4
+              ruby_4_0
               # Required to build psych via irb dependency
               # https://github.com/kachick/rspec-matchers-power_assert_matchers/issues/122
               # https://github.com/ruby/irb/pull/648

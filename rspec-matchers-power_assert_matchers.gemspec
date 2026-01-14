@@ -27,7 +27,7 @@ Gem::Specification.new do |gem|
   gem.add_dependency('power_assert', '>= 2.0.3', '< 4.0')
   gem.add_dependency('irb', '>= 1.4.0', '< 2.0') # To colorize
 
-  gem.required_ruby_version = '>= 3.3'
+  gem.required_ruby_version = '>= 3.4'
 
   # common
 
