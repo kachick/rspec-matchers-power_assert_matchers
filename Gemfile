@@ -18,5 +18,5 @@ end
 
 group :test do
   gem 'rspec', '~> 3.13.2'
-  gem 'warning', '~> 1.5.0'
+  gem 'warning', '~> 1.6.0'
 end
