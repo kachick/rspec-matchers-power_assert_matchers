@@ -8,7 +8,7 @@ on:
 jobs:
   rubygems:
     name: Push gem to RubyGems.org
-    runs-on: ubuntu-24.04
+    runs-on: ubuntu-26.04
 
     permissions:
       id-token: write # IMPORTANT: this permission is mandatory for trusted publishing
