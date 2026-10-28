@@ -56,7 +56,7 @@ end
 
 desc 'Tests except ruby'
 task :linters do
-  sh('typos . .github .vscode')
+  sh('typos . .github')
   sh('dprint check')
   sh('nixfmt --check ./*.nix')
 end

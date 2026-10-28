@@ -60,3 +60,4 @@ build-iPhoneSimulator/
 .DS_Store
 
 .rspec_status
+.vscode/

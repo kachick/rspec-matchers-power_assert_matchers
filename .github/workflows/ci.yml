@@ -3,40 +3,35 @@ name: ❄️
 on:
   push:
     branches: [main]
-    paths:
-      - '.github/workflows/ci-nix.yml'
-      - '**.nix'
-      - 'flake.*'
-      - '.ruby-version'
-      - 'dprint.json'
-      - '**.gemspec'
-      - 'Gemfile'
   pull_request:
-    paths:
-      - '.github/workflows/ci-nix.yml'
-      - '**.nix'
-      - 'flake.*'
-      - '.ruby-version'
-      - 'dprint.json'
-      - '**.gemspec'
-      - 'Gemfile'
   schedule:
     # Every 10:42 JST
     # https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows#schedule
     - cron: '42 1 * * *'
   workflow_dispatch:
 
+permissions:
+  contents: read
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   tasks:
     runs-on: ubuntu-26.04
     timeout-minutes: 30
     steps:
-      - uses: actions/checkout@v7
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
       - uses: cachix/install-nix-action@13d8dd58da0234aa297dedd986986ccb8e7f3e24 # v31.11.1
         with:
           extra_nix_config: |
             sandbox = true
             accept-flake-config = true
+            extra-substituters = https://kachick.cachix.org
+            extra-trusted-public-keys = kachick.cachix.org-1:7giZGKW03gPFkbde09JNpDKCbDGGwBuU/Z11W/jUtEQ=
       - run: nix flake check
       - run: nix develop --command echo 'This step should be done before any other "nix develop" steps because of measuring Nix build time'
       - run: nix develop --command bundle install
