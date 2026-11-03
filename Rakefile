@@ -63,5 +63,5 @@ end
 
 desc 'https://github.com/kachick/selfup'
 task :selfup do
-  sh('git ls-files | xargs nix run github:kachick/selfup/v1.2.0#selfup -- run')
+  sh('git ls-files | xargs nix run github:kachick/selfup/v1.3.1#selfup -- run')
 end
